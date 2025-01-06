@@ -1,0 +1,28 @@
+{
+  "name": "error-handler-lib",
+  "module": "index.ts",
+  "type": "module",
+  "types": "./types/index.d.ts",
+  "scripts": {
+    "dev": "bun run src/index.ts",
+    "lint": "biome check --fix .",
+    "postinstall": "postinstall",
+    "prepare": "postinstall",
+    "typecheck": "bun run build.ts && tsc"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "del": "^8.0.0",
+    "postinstall": "^0.7.5"
+  },
+  "peerDependencies": {
+    "typescript": "^5.7.2"
+  },
+  "optionalDependencies": {
+    "@biomejs/biome": "^1.9.4"
+  },
+  "dependencies": {
+    "zod": "^3.24.1"
+  },
+  "trustedDependencies": ["postinstall"]
+}
