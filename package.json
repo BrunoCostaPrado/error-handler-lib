@@ -8,6 +8,7 @@
     "type": "git",
     "url": "git+https://github.com/BrunoCostaPrado/error-handler-lib.git"
   },
+  "version": "0.0.1",
   "license": "",
   "scripts": {
     "dev": "bun run src/index.ts",
@@ -30,6 +31,7 @@
   "dependencies": {
     "zod": "^3.24.1"
   },
-  "trustedDependencies": ["postinstall"],
-  "version": "0.0.1"
+  "trustedDependencies": [
+    "postinstall"
+  ]
 }
