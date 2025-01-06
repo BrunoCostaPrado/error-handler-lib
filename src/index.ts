@@ -25,24 +25,3 @@ class CustomError extends Error {
 }
 
 export { catchErrorTyped, CustomError }
-
-// function wait(duration: number) {
-//   return new Promise(resolve => {
-//     setTimeout(resolve, duration)
-//   })
-// }
-
-// async function getUser(id: number) {
-//   await wait(1000)
-//   if (id === 2) {
-//     throw new CustomError("404-User not found")
-//   }
-//   return { id, name: "Bruno" }
-// }
-
-// const [error, user] = await catchErrorTyped(getUser(2), [CustomError])
-// if (error) {
-//   console.log(error.message)
-// } else {
-//   console.log(user)
-// }
