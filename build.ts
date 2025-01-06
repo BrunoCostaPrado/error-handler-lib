@@ -7,7 +7,7 @@ const delDir = await deleteAsync(dir)
 console.log("Deleted directories:\n", dir.join("\n"))
 
 await Bun.build({
-  entrypoints: ["./src/index.ts"],
+  entrypoints: ["./index.ts"],
   outdir: "./build",
   target: "browser",
   format: "esm",

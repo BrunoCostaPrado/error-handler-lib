@@ -11,7 +11,7 @@
   "version": "0.0.4",
   "license": "",
   "scripts": {
-    "dev": "bun run src/index.ts",
+    "dev": "bun run index.ts",
     "lint": "biome check --fix .",
     "postinstall": "postinstall",
     "prepare": "postinstall",
