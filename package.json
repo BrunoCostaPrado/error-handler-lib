@@ -2,7 +2,13 @@
   "name": "error-handler-lib",
   "module": "index.ts",
   "type": "module",
-  "types": "./types/index.d.ts",
+  "types": "./build/index.d.ts",
+  "author": "Bruno Costa Prado",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BrunoCostaPrado/error-handler-lib.git"
+  },
+  "license": "",
   "scripts": {
     "dev": "bun run src/index.ts",
     "lint": "biome check --fix .",
@@ -24,5 +30,6 @@
   "dependencies": {
     "zod": "^3.24.1"
   },
-  "trustedDependencies": ["postinstall"]
+  "trustedDependencies": ["postinstall"],
+  "version": ""
 }

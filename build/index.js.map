@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "sources": ["..\\src\\index.ts"],
+  "sourcesContent": [
+    "function catchErrorTyped<T, E extends new (message?: string) => Error>(\n  promise: Promise<T>,\n  errorsToCatch?: E[]\n): Promise<[undefined, T] | [InstanceType<E>]> {\n  return promise\n    .then(data => {\n      return [undefined, data] as [undefined, T]\n    })\n    .catch(error => {\n      if (errorsToCatch === undefined) {\n        return [error]\n      }\n\n      if (errorsToCatch.some(e => error instanceof e)) {\n        return [error]\n      }\n\n      throw error\n    })\n}\n\nclass CustomError extends Error {\n  name = \"CustomError\"\n  extraProp = \"Error: Test\"\n}\n\nexport { catchErrorTyped, CustomError }\n\n// function wait(duration: number) {\n//   return new Promise(resolve => {\n//     setTimeout(resolve, duration)\n//   })\n// }\n\n// async function getUser(id: number) {\n//   await wait(1000)\n//   if (id === 2) {\n//     throw new CustomError(\"404-User not found\")\n//   }\n//   return { id, name: \"Bruno\" }\n// }\n\n// const [error, user] = await catchErrorTyped(getUser(2), [CustomError])\n// if (error) {\n//   console.log(error.message)\n// } else {\n//   console.log(user)\n// }\n"
+  ],
+  "mappings": "AAAA,SAAS,CAA6D,CACpE,EACA,EAC6C,CAC7C,OAAO,EACJ,KAAK,KAAQ,CACZ,MAAO,CAAC,OAAW,CAAI,EACxB,EACA,MAAM,KAAS,CACd,GAAI,IAAkB,OACpB,MAAO,CAAC,CAAK,EAGf,GAAI,EAAc,KAAK,KAAK,aAAiB,CAAC,EAC5C,MAAO,CAAC,CAAK,EAGf,MAAM,EACP,EAGL,MAAM,UAAoB,KAAM,CAC9B,KAAO,cACP,UAAY,aACd",
+  "debugId": "3B714A587E7E3F6064756E2164756E21",
+  "names": []
+}
