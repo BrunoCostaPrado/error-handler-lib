@@ -1,5 +1,5 @@
 {
-  "name": "error-handler-lib",
+  "name": "error-handler-lib-bcp",
   "module": "index.ts",
   "type": "module",
   "types": "./build/index.d.ts",
@@ -31,5 +31,5 @@
     "zod": "^3.24.1"
   },
   "trustedDependencies": ["postinstall"],
-  "version": ""
+  "version": "0.0.1"
 }
