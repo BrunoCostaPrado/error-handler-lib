@@ -28,9 +28,7 @@
   "optionalDependencies": {
     "@biomejs/biome": "^1.9.4"
   },
-  "dependencies": {
-    "zod": "^3.24.1"
-  },
+  "dependencies": {},
   "trustedDependencies": [
     "postinstall"
   ]
