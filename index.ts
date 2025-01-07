@@ -1,4 +1,4 @@
-function catchErrorTyped<T, E extends new (message?: string) => Error>(
+function catchError<T, E extends new (message?: string) => Error>(
   promise: Promise<T>,
   errorsToCatch?: E[]
 ): Promise<[undefined, T] | [InstanceType<E>]> {
@@ -24,4 +24,4 @@ class CustomError extends Error {
   extraProp = "Error: Test"
 }
 
-export { catchErrorTyped, CustomError }
+export { catchError, CustomError }
