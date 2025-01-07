@@ -7,10 +7,6 @@ settings:
 importers:
 
   .:
-    dependencies:
-      typescript:
-        specifier: ^5.7.2
-        version: 5.7.2
     optionalDependencies:
       '@biomejs/biome':
         specifier: ^1.9.4
@@ -31,6 +27,9 @@ importers:
       tsup:
         specifier: ^8.3.5
         version: 8.3.5(typescript@5.7.2)
+      typescript:
+        specifier: ^5.7.2
+        version: 5.7.2
 
 packages:
 

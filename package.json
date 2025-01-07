@@ -23,14 +23,13 @@
     "@types/node": "^22.10.5",
     "del": "^8.0.0",
     "postinstall": "^0.7.5",
-    "tsup": "^8.3.5"
-  },
-  "peerDependencies": {
+    "tsup": "^8.3.5",
     "typescript": "^5.7.2"
   },
   "optionalDependencies": {
     "@biomejs/biome": "^1.9.4"
   },
-  "dependencies": {},
-  "trustedDependencies": ["postinstall"]
+  "trustedDependencies": [
+    "postinstall"
+  ]
 }
