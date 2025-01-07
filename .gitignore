@@ -1,4 +1,4 @@
-.pnpm-debug.log*
+pnpm.*
 bun.lockb
 
 build
