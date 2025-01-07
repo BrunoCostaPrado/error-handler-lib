@@ -8,7 +8,7 @@
     "type": "git",
     "url": "git+https://github.com/BrunoCostaPrado/error-handler-lib.git"
   },
-  "version": "0.0.7",
+  "version": "0.0.6",
   "license": "Apache-2.0",
   "scripts": {
     "dev": "bun run index.ts",
