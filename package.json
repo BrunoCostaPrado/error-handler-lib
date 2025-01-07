@@ -15,8 +15,7 @@
     "build": "tsup index.ts --format esm --out-dir build --clean && tsc",
     "lint": "biome check --fix .",
     "postinstall": "postinstall",
-    "prepare": "postinstall",
-    "typecheck": "bun run build.ts && tsc"
+    "prepare": "postinstall"
   },
   "devDependencies": {
     "@changesets/cli": "^2.27.11",
