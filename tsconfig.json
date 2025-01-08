@@ -30,5 +30,5 @@
       "@/*": ["./src/*"]
     }
   },
-  "exclude": ["node_modules", "build", "build.ts", "types"]
+  "exclude": ["node_modules", "build"]
 }
