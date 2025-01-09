@@ -1,8 +1,8 @@
 {
   "name": "@redbrunocosta/error-handler-lib-bcp",
-  "module": "index.ts",
+  "module": "./build/index.d.ts",
+  "main": "build/index.js",
   "type": "module",
-  "types": "./build/index.d.ts",
   "author": "Bruno Costa Prado",
   "repository": {
     "type": "git",
@@ -32,7 +32,6 @@
     "postinstall"
   ],
   "description": "Error Handling lib for TypeScript",
-  "main": "index.js",
   "bugs": {
     "url": "https://github.com/BrunoCostaPrado/error-handler-lib/issues"
   },
