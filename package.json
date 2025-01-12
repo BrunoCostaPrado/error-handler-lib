@@ -8,29 +8,28 @@
     "type": "git",
     "url": "git+https://github.com/BrunoCostaPrado/error-handler-lib.git"
   },
-  "version": "1.0.5",
+  "version": "1.0.6",
   "license": "Apache-2.0",
   "scripts": {
-    "dev": "bun run index.ts",
     "build": "tsup",
-    "b": "tsup index.ts --format esm --out-dir build --clean && tsc",
+    "coverage": "vitest run --coverage",
+    "dev": "bun run index.ts",
     "lint": "biome check --fix .",
     "postinstall": "postinstall",
-    "change": "changeset"
+    "test": "vitest"
   },
   "devDependencies": {
-    "@changesets/cli": "^2.27.11",
     "@types/node": "^22.10.5",
     "postinstall": "^0.7.5",
+    "tslib": "^2.8.1",
     "tsup": "^8.3.5",
-    "typescript": "^5.7.2"
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.8"
   },
   "optionalDependencies": {
     "@biomejs/biome": "^1.9.4"
   },
-  "trustedDependencies": [
-    "postinstall"
-  ],
+  "trustedDependencies": ["postinstall"],
   "description": "Error Handling lib for TypeScript",
   "bugs": {
     "url": "https://github.com/BrunoCostaPrado/error-handler-lib/issues"

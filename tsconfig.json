@@ -10,25 +10,24 @@
     // Bundler mode
     "moduleResolution": "bundler",
     // "allowImportingTsExtensions": true,
+    "importHelpers": true,
     "verbatimModuleSyntax": true,
     //Types
-    "noEmit": false,
+    // "noEmit": true,
     "declaration": true,
     "emitDeclarationOnly": true,
     "typeRoots": ["./build"],
     "outDir": "./build",
+
     // Best practices
     "strict": true,
-    "skipLibCheck": true,
+    "skipLibCheck": false,
     "noFallthroughCasesInSwitch": true,
     // Some stricter flags (disabled by default)
     "noUnusedLocals": false,
     "noUnusedParameters": false,
     "noPropertyAccessFromIndexSignature": false,
-    "baseUrl": ".",
-    "paths": {
-      "@/*": ["./src/*"]
-    }
+    "baseUrl": "."
   },
-  "exclude": ["node_modules", "build"]
+  "exclude": ["node_modules", "build", "tsup.config.ts"]
 }

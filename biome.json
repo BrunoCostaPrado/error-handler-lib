@@ -37,6 +37,6 @@
     }
   },
   "files": {
-    "ignore": ["node_modules", "build/*.*.map", ".vscode"]
+    "ignore": ["node_modules", "build/*.*.map", ".vscode", "test/coverage"]
   }
 }
