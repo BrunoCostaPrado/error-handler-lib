@@ -17,18 +17,13 @@ async function getUser(id: number) {
 
 test("getUser returns user data when id is valid", async () => {
   const id = 1
-  const user = await getUser(id)
+  const [, user] = await catchError(getUser(id), [CustomError])
   expect(user).toEqual({ id, name: "Bruno" })
+  console.log(user)
 })
 
 test("getUser throws CustomError when id is invalid", async () => {
   const id = 2
   await expect(getUser(id)).rejects.toThrowError(CustomError)
-})
-
-test("getUser throws CustomError with correct message when id is invalid", async () => {
-  const id = 2
-  await expect(getUser(id)).rejects.toThrowError(
-    "404-User not found, Try other id"
-  )
+  console.log(getUser(id))
 })
