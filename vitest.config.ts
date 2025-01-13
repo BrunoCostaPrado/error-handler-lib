@@ -5,7 +5,6 @@ export default defineConfig({
     name: "catch-error-lib",
     root: "./test",
     environment: "node",
-
     minWorkers: 3,
     maxWorkers: 3,
     maxConcurrency: 3,
