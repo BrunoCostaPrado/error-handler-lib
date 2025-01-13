@@ -27,16 +27,11 @@
     "rules": {
       "recommended": true,
       "style": {
-        "noNonNullAssertion": "off",
-        "useConst": {
-          "level": "warn",
-          "fix": "none"
-        },
-        "noVar": "error"
+        "noNonNullAssertion": "off"
       }
     }
   },
   "files": {
-    "ignore": ["node_modules", "build/*.*.map", ".vscode", "test/coverage"]
+    "ignore": ["node_modules", ".vscode"]
   }
 }
