@@ -26,9 +26,20 @@ if (error2) {
   console.log(user2)
 }
 
+const [error3, user3] = await catchError(getUser(2))
+if (error3) {
+  console.log(error3.message)
+} else {
+  console.log(user3)
+}
+
+const customError = new CustomError()
+customError.name = "This is a Custom Error"
+console.log(customError.name)
+
 const err: CustomErrorType = {
   name: "CustomError",
   extraProp: "Error: Test",
-  message: "Error: Test",
+  message: "There is an error",
 }
 console.log(err.message)
