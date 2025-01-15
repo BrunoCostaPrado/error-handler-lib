@@ -2,8 +2,7 @@ node_modules
 index.ts
 # build
 .vscode
-.changeset
 .github
 biome.json
-bun.lockb
+pnpm-lock.yaml
 test

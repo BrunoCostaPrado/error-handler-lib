@@ -1,4 +1,4 @@
-import { CustomError, catchError } from "./index"
+import { CustomError, type CustomErrorType, catchError } from "./index"
 
 function wait(duration: number) {
   return new Promise(resolve => {
@@ -6,7 +6,7 @@ function wait(duration: number) {
   })
 }
 async function getUser(id: number) {
-  await wait(1000)
+  await wait(100)
   if (id === 2) {
     throw new CustomError("404-User not found, Try other id")
   }
@@ -18,3 +18,17 @@ if (error) {
 } else {
   console.log(user)
 }
+
+const [error2, user2] = await catchError(getUser(2), [CustomError])
+if (error2) {
+  console.log(error2.message)
+} else {
+  console.log(user2)
+}
+
+const err: CustomErrorType = {
+  name: "CustomError",
+  extraProp: "Error: Test",
+  message: "Error: Test",
+}
+console.log(err.message)

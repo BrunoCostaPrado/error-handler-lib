@@ -1,4 +1,4 @@
-import { expect, it, test } from "vitest"
+import { expect, test } from "vitest"
 import { CustomError, catchError } from "../index"
 
 function wait(duration: number) {
@@ -8,22 +8,31 @@ function wait(duration: number) {
 }
 
 async function getUser(id: number) {
-  await wait(500)
+  await wait(100)
   if (id === 2) {
-    throw new CustomError("404-User not found, Try other id")
+    throw new CustomError("404-User not found, Try other id", {})
   }
   return { id, name: "Bruno" }
 }
 
 test("getUser returns user data when id is valid", async () => {
-  const id = 1
+  const id: number = 1
   const [, user] = await catchError(getUser(id), [CustomError])
   expect(user).toEqual({ id, name: "Bruno" })
-  console.log(user)
 })
 
 test("getUser throws CustomError when id is invalid", async () => {
-  const id = 2
+  const id: number = 2
   await expect(getUser(id)).rejects.toThrowError(CustomError)
-  console.log(getUser(id))
+})
+
+test("getUser throws CustomError when id is invalid", async () => {
+  const id: number = 2
+  const [error] = await catchError(getUser(id), [CustomError])
+  // await expect(getUser(id)).rejects.toThrowError(CustomError)
+  // if (error) {
+  expect(error).toBeInstanceOf(CustomError)
+  await expect(error?.message).toEqual("404-User not found, Try other id")
+  // }
+  console.log(error?.message)
 })

@@ -24,4 +24,6 @@ class CustomError extends Error {
   extraProp = "Error: Test"
 }
 
-export { catchError, CustomError }
+type CustomErrorType = InstanceType<typeof CustomError>
+
+export { catchError, CustomError, type CustomErrorType }

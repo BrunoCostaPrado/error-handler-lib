@@ -8,12 +8,13 @@
     "type": "git",
     "url": "git+https://github.com/BrunoCostaPrado/error-handler-lib.git"
   },
-  "version": "1.0.6",
+  "version": "1.0.7",
   "license": "Apache-2.0",
   "scripts": {
     "build": "tsup",
     "coverage": "vitest run --coverage",
-    "dev": "bun run index.ts",
+    "dev": "tsx --watch index.ts",
+    "example": "tsx --watch example.ts",
     "lint": "biome check --fix .",
     "postinstall": "postinstall",
     "test": "vitest"
@@ -23,6 +24,7 @@
     "postinstall": "^0.7.5",
     "tslib": "^2.8.1",
     "tsup": "^8.3.5",
+    "tsx": "^4.19.2",
     "typescript": "^5.7.2",
     "vitest": "^2.1.8"
   },
