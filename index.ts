@@ -19,6 +19,29 @@ function catchError<T, E extends new (message?: string) => Error>(
     })
 }
 
+// function catchError<T, E extends new (message?: string) => Error>(
+//   promise: Promise<T>,
+//   errorsToCatch?: E[]
+// ): Promise<[undefined, T] | [InstanceType<E>]> {
+//   return promise
+//     .then(data => {
+//       return [undefined, data] as [undefined, T]
+//     })
+//     .catch(error => {
+//       if (errorsToCatch === undefined) {
+//         return [error]
+//       }
+
+//       for (const ErrorConstructor of errorsToCatch) {
+//         if (error instanceof ErrorConstructor) {
+//           return [error]
+//         }
+//       }
+
+//       throw error
+//     })
+// }
+
 class CustomError extends Error {
   name = "CustomError"
   extraProp = "Error: Test"

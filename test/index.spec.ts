@@ -8,9 +8,11 @@ function wait(duration: number) {
 }
 
 async function getUser(id: number) {
-  await wait(100)
+  // await wait(100)
   if (id === 2) {
-    throw new CustomError("404-User not found, Try other id", {})
+    throw new CustomError("404-User not found, Try other id", {
+      cause: { extraProp: "Error: Test" },
+    })
   }
   return { id, name: "Bruno" }
 }
@@ -35,4 +37,5 @@ test("getUser throws CustomError when id is invalid", async () => {
   await expect(error?.message).toEqual("404-User not found, Try other id")
   // }
   console.log(error?.message)
+  console.log(error?.extraProp)
 })
