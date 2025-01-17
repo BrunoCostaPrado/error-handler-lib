@@ -1,5 +1,5 @@
-import { CustomError, type CustomErrorType, catchError } from "./index"
-
+import { CustomError, catchError } from "./index"
+const customError = new CustomError()
 function wait(duration: number) {
   return new Promise(resolve => {
     setTimeout(resolve, duration)
@@ -22,24 +22,14 @@ if (error) {
 const [error2, user2] = await catchError(getUser(2), [CustomError])
 if (error2) {
   console.log(error2.message)
+  console.log(error2.extraProp)
 } else {
   console.log(user2)
 }
 
-const [error3, user3] = await catchError(getUser(2))
-if (error3) {
-  console.log(error3.message)
-} else {
-  console.log(user3)
-}
-
-const customError = new CustomError()
-customError.name = "This is a Custom Error"
+customError.name = "Error on fetching user"
+customError.type = 404
+customError.message = `There was an error on ${getUser.name}`
 console.log(customError.name)
-
-const err: CustomErrorType = {
-  name: "CustomError",
-  extraProp: "Error: Test",
-  message: "There is an error",
-}
-console.log(err.message)
+console.log(customError.type)
+console.log(customError.message)
