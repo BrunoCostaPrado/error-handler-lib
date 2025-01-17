@@ -12,7 +12,6 @@
   "license": "Apache-2.0",
   "scripts": {
     "build": "tsup",
-    "coverage": "vitest run --coverage",
     "dev": "tsx --watch index.ts",
     "example": "tsx --watch example.ts",
     "lint": "biome check --fix .",
@@ -20,7 +19,7 @@
     "test": "vitest"
   },
   "devDependencies": {
-    "@types/node": "^22.10.6",
+    "@types/node": "^22.10.7",
     "postinstall": "^0.7.5",
     "tslib": "^2.8.1",
     "tsup": "^8.3.5",

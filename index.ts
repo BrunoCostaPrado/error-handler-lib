@@ -1,4 +1,4 @@
-function catchError<T, E extends new (message?: string) => Error>(
+async function catchError<T, E extends new (message?: string) => Error>(
   promise: Promise<T>,
   errorsToCatch?: E[]
 ): Promise<[undefined, T] | [InstanceType<E>]> {
@@ -19,7 +19,7 @@ function catchError<T, E extends new (message?: string) => Error>(
     })
 }
 
-// function catchError<T, E extends new (message?: string) => Error>(
+// async function catchError<T, E extends new (message?: string) => Error>(
 //   promise: Promise<T>,
 //   errorsToCatch?: E[]
 // ): Promise<[undefined, T] | [InstanceType<E>]> {
@@ -43,10 +43,9 @@ function catchError<T, E extends new (message?: string) => Error>(
 // }
 
 class CustomError extends Error {
-  name = "CustomError"
-  extraProp = "Error: Test"
+  name = ""
+  extraProp = ""
+  type = 0
 }
 
-type CustomErrorType = InstanceType<typeof CustomError>
-
-export { catchError, CustomError, type CustomErrorType }
+export { catchError, CustomError }

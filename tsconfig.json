@@ -29,5 +29,13 @@
     "noPropertyAccessFromIndexSignature": false,
     "baseUrl": "."
   },
-  "exclude": ["node_modules", "build", "tsup.config.ts"]
+  "exclude": [
+    "node_modules",
+    "build",
+    "tsup.config.ts",
+    "test",
+    "docs",
+    "vitest.config.ts",
+    "example.ts"
+  ]
 }
