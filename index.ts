@@ -19,7 +19,6 @@ async function catchError<T, E extends new (message?: string) => Error>(
     })
 }
 
-
 class CustomError extends Error {
   name = ""
   extraProp = ""
