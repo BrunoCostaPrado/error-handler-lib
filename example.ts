@@ -29,7 +29,7 @@ if (error2) {
 
 customError.name = "Error on fetching user"
 customError.type = 404
-customError.message = `There was an error on ${getUser.name}`
+customError.message = "User not found"
 console.log(customError.name)
 console.log(customError.type)
 console.log(customError.message)

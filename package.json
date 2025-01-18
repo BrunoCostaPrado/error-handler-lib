@@ -12,10 +12,10 @@
   "license": "Apache-2.0",
   "scripts": {
     "build": "tsup",
-    "dev": "tsx --watch index.ts",
-    "example": "tsx --watch example.ts",
+    "dev": "tsx --watch example.ts",
     "lint": "biome check --fix .",
     "postinstall": "postinstall",
+    "start": "tsx --watch index.ts",
     "test": "vitest"
   },
   "devDependencies": {
