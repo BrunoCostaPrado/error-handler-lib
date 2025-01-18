@@ -13,7 +13,7 @@
   "scripts": {
     "build": "tsup",
     "dev": "tsx --watch example.ts",
-    "doc": "typedoc --watch --tsconfig tsconfig.json",
+    "doc": "typedoc --tsconfig tsconfig.json",
     "lint": "biome check --fix .",
     "postinstall": "postinstall",
     "start": "tsx --watch index.ts",

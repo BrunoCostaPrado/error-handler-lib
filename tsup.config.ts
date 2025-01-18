@@ -10,4 +10,5 @@ export default defineConfig({
   target: "esnext",
   outDir: "build",
   format: "esm",
+  tsconfig: "tsconfig.json",
 })
