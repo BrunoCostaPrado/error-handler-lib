@@ -1,4 +1,5 @@
 import { CustomError, catchError } from "./index"
+
 const customError = new CustomError()
 function wait(duration: number) {
   return new Promise(resolve => {

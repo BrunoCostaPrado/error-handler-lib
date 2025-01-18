@@ -37,5 +37,6 @@
     "docs",
     "vitest.config.ts",
     "example.ts"
-  ]
+  ],
+  "include": ["./index.ts"]
 }
