@@ -2,6 +2,7 @@ index.ts
 example.ts
 biome.json
 pnpm-lock.yaml
+bun.lock
 vitest.config.ts
 tsup.config.ts
 typedoc.json
