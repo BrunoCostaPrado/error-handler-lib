@@ -17,7 +17,8 @@
     "lint": "biome check --fix .",
     "postinstall": "postinstall",
     "start": "tsx --watch index.ts",
-    "test": "vitest"
+    "test": "vitest",
+    "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
     "@types/bun": "^1.2.0",
