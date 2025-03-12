@@ -13,7 +13,7 @@ jobs:
         run: npm install -g bun && bun install
 
       - name: Typecheck
-        run: bun typecheck:go
+        run: bun typecheck
 
       - name: build
         run: bun run build
