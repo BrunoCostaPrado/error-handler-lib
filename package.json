@@ -12,7 +12,7 @@
   "license": "Apache-2.0",
   "scripts": {
     "build": "tsup",
-    "dev": "tsx --watch example.ts",
+    "dev": "bun  --watch src/example.ts",
     "doc": "typedoc --tsconfig tsconfig.json",
     "lint": "biome check --fix .",
     "postinstall": "postinstall",
