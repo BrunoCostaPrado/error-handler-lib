@@ -12,14 +12,16 @@
   "license": "Apache-2.0",
   "scripts": {
     "build": "tsup",
-    "dev": "tsx --watch example.ts",
+    "dev": "bun  --watch src/example.ts",
     "doc": "typedoc --tsconfig tsconfig.json",
     "lint": "biome check --fix .",
     "postinstall": "postinstall",
     "start": "tsx --watch index.ts",
-    "test": "vitest"
+    "test": "vitest",
+    "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
+    "@types/bun": "^1.2.0",
     "@types/node": "^22.10.8",
     "postinstall": "^0.7.5",
     "tslib": "^2.8.1",
