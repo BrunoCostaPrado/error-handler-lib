@@ -38,5 +38,5 @@
     "vitest.config.ts",
     "example.ts"
   ],
-  "include": ["./index.ts"]
+  "include": ["./src/index.ts"]
 }
