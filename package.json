@@ -18,7 +18,7 @@
     "postinstall": "postinstall",
     "start": "tsx --watch index.ts",
     "test": "vitest",
-    "typecheck": "tsc --noEmit",
+    "typecheck": "tsc -b -f -diagnostics",
     "typecheck:go": "./built/local/tsgo.exe"
   },
   "devDependencies": {
