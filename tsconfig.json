@@ -13,11 +13,11 @@
     "importHelpers": true,
     "verbatimModuleSyntax": true,
     //Types
-    // "noEmit": true,
-    "declaration": true,
-    "emitDeclarationOnly": true,
-    "typeRoots": ["./build"],
-    "outDir": "./build",
+    "noEmit": true,
+    // "declaration": true,
+    // "emitDeclarationOnly": true,
+    "typeRoots": ["./types"],
+    "outDir": "./types",
 
     // Best practices
     "strict": true,
@@ -32,11 +32,12 @@
   "exclude": [
     "node_modules",
     "build",
+    "built",
     "tsup.config.ts",
     "test",
     "docs",
     "vitest.config.ts",
     "example.ts"
   ],
-  "include": ["./src/index.ts"]
+  "include": ["./src/index.ts", "./test/index.spec.ts"]
 }

@@ -32,6 +32,6 @@
     }
   },
   "files": {
-    "ignore": ["node_modules", ".vscode", "license", "docs"]
+    "ignore": ["node_modules", ".vscode", "license", "docs", "built", "build"]
   }
 }

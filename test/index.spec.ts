@@ -1,5 +1,5 @@
 import { expect, test } from "vitest"
-import { CustomError, catchError } from "../index"
+import { CustomError, catchError } from "../src/index"
 
 function wait(duration: number) {
   return new Promise(resolve => {
