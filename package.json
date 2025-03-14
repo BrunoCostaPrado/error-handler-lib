@@ -4,6 +4,10 @@
   "main": "build/index.js",
   "type": "module",
   "author": "Bruno Costa Prado",
+  "homepage": "https://github.com/BrunoCostaPrado/error-handler-lib#readme",
+  "bugs": {
+    "url": "https://github.com/BrunoCostaPrado/error-handler-lib/issues"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/BrunoCostaPrado/error-handler-lib.git"
@@ -16,7 +20,6 @@
     "doc": "typedoc --tsconfig tsconfig.json",
     "lint": "biome check --fix .",
     "postinstall": "postinstall",
-    "start": "tsx --watch index.ts",
     "test": "vitest",
     "typecheck": "tsc -b -f -diagnostics",
     "typecheck:go": "./built/local/tsgo.exe"
@@ -36,9 +39,5 @@
     "@biomejs/biome": "^1.9.4"
   },
   "trustedDependencies": ["postinstall"],
-  "description": "Error Handling lib for TypeScript",
-  "bugs": {
-    "url": "https://github.com/BrunoCostaPrado/error-handler-lib/issues"
-  },
-  "homepage": "https://github.com/BrunoCostaPrado/error-handler-lib#readme"
+  "description": "Error Handling lib for TypeScript"
 }
