@@ -6,7 +6,7 @@ export default defineConfig({
   sourcemap: false,
   clean: true,
   minify: false,
-  dts: true,
+  dts: false,
   target: "esnext",
   outDir: "build",
   format: "esm",

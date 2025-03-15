@@ -1,0 +1,9 @@
+preload = ["./src/index.ts"]
+
+
+# logLevel = "debug"
+smol = true
+
+
+# [install]
+concurrentScripts = 5
