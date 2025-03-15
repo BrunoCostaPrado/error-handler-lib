@@ -26,7 +26,8 @@
     "typecheck:go": "./built/local/tsgo.exe"
   },
   "dependencies": {
-    "postinstall": "^0.7.5"
+    "postinstall": "^0.7.5",
+    "typescript": "^5.8.2"
   },
   "devDependencies": {
     "@types/bun": "^1.2.5",
@@ -35,8 +36,7 @@
     "tsup": "^8.4.0",
     "tsx": "^4.19.3",
     "typedoc": "^0.27.9",
-    "typescript": "^5.8.2",
-    "vitest": "^2.1.9"
+    "vitest": "^3.0.8"
   },
   "optionalDependencies": {
     "@biomejs/biome": "^1.9.4"
