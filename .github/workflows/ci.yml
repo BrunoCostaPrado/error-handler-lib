@@ -12,7 +12,7 @@ jobs:
       - name: Install bun
         uses: oven-sh/setup-bun@v2
       - name: Install dependencies
-        run: bun install
+        run: bun install --production
 
       - name: Typecheck
         run: bun typecheck
