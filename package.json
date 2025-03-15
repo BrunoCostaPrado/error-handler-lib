@@ -22,7 +22,8 @@
     "lint": "biome check --fix .",
     "postinstall": "postinstall",
     "test": "vitest",
-    "typecheck": "tsc -b -f -diagnostics",
+    "typecheck": "tsc --noEmit",
+    "typecheck:dev": "tsc -b -f -diagnostics",
     "typecheck:go": "./built/local/tsgo.exe"
   },
   "dependencies": {
