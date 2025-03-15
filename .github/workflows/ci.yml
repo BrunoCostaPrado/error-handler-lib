@@ -4,7 +4,7 @@ on: [push]
 
 jobs:
   build:
-    name: build-app
+    name: check-app
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repo
