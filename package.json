@@ -17,34 +17,42 @@
   "scripts": {
     "build": "bun build.ts",
     "builder": "tsup",
+    "ci": "act -W '.github/workflows/'",
     "dev": "bun  --watch src/example.ts",
     "doc": "typedoc --tsconfig tsconfig.json",
     "lint": "biome check --fix .",
-    "postinstall": "postinstall",
+    "postinstall": "patch-package",
+    "prepare": "husky",
     "test": "vitest",
     "typecheck": "tsc --noEmit",
     "typecheck:dev": "tsc -b -f -diagnostics",
     "typecheck:go": "./built/local/tsgo.exe"
   },
   "dependencies": {
+    "patch-package": "^8.0.0",
     "postinstall": "^0.7.5",
+    "postinstall-postinstall": "^2.1.0",
     "typescript": "^5.8.2"
   },
   "devDependencies": {
     "@types/bun": "^1.2.5",
     "@types/node": "^22.13.10",
+    "husky": "^9.1.7",
     "tslib": "^2.8.1",
     "tsup": "^8.4.0",
     "tsx": "^4.19.3",
     "typedoc": "^0.27.9",
-    "vitest": "^3.0.8"
+    "vitest": "^3.0.9"
   },
   "optionalDependencies": {
     "@biomejs/biome": "^1.9.4"
   },
   "trustedDependencies": ["postinstall"],
   "description": "Error Handling lib for TypeScript",
+  "prepare ": {
+    "lint": "biome check --fix ."
+  },
   "postinstall ": {
-    "typecheck:go": "./built/local/tsgo.exe"
+    "check": "bun typecheck && biome check --fix ."
   }
 }
