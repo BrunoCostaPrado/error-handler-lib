@@ -24,6 +24,7 @@
     "postinstall": "patch-package",
     "prepare": "husky",
     "test": "vitest",
+    "test:ui": "vitest --ui",
     "typecheck": "tsc --noEmit",
     "typecheck:dev": "tsc -b -f -diagnostics",
     "typecheck:go": "./built/local/tsgo.exe"
@@ -37,6 +38,7 @@
   "devDependencies": {
     "@types/bun": "^1.2.5",
     "@types/node": "^22.13.10",
+    "@vitest/ui": "^3.0.9",
     "husky": "^9.1.7",
     "tslib": "^2.8.1",
     "tsup": "^8.4.0",
